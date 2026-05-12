@@ -1,0 +1,141 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#0f172a;
+  font-family:Arial,sans-serif;
+  color:white;
+  display:flex;
+  justify-content:center;
+  padding:20px;
+}
+
+.app{
+  width:100%;
+  max-width:430px;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.top h1{
+  font-size:30px;
+}
+
+.top i{
+  color:#22c55e;
+  font-size:28px;
+}
+
+.hero{
+  background:linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.hero h2{
+  margin-bottom:8px;
+}
+
+.form,
+.card,
+.progress-section,
+.plan-card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+input,
+select{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#22c55e;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.02);
+}
+
+.dashboard{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+}
+
+.card{
+  text-align:center;
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#94a3b8;
+}
+
+.card p{
+  color:#22c55e;
+  font-size:20px;
+}
+
+.progress-bar{
+  width:100%;
+  height:20px;
+  background:#334155;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:15px;
+}
+
+#progress{
+  width:0%;
+  height:100%;
+  background:#22c55e;
+  transition:1s;
+}
+
+.plan-card h2{
+  margin-bottom:15px;
+}
+
+#plan{
+  line-height:1.8;
+  color:#e2e8f0;
+}
+
+@media(max-width:500px){
+
+  .dashboard{
+    grid-template-columns:1fr;
+  }
+
+}

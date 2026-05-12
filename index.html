@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FitAI Pro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="top">
+
+    <h1>FitAI Pro 🏋️</h1>
+
+    <i class="fa-solid fa-heart-pulse"></i>
+
+  </div>
+
+  <div class="hero">
+
+    <h2>Transform Your Body 🔥</h2>
+
+    <p>
+      AI Powered Fitness & Diet Planner
+    </p>
+
+  </div>
+
+  <div class="form">
+
+    <input
+      type="number"
+      id="age"
+      placeholder="Enter Age"
+    >
+
+    <input
+      type="number"
+      id="weight"
+      placeholder="Enter Weight (kg)"
+    >
+
+    <input
+      type="number"
+      id="height"
+      placeholder="Enter Height (cm)"
+    >
+
+    <select id="goal">
+
+      <option value="loss">
+        Weight Loss
+      </option>
+
+      <option value="maintain">
+        Maintain Weight
+      </option>
+
+      <option value="gain">
+        Weight Gain
+      </option>
+
+    </select>
+
+    <button onclick="generatePlan()">
+      Generate AI Plan
+    </button>
+
+  </div>
+
+  <div class="dashboard">
+
+    <div class="card">
+      <h3>BMI</h3>
+      <p id="bmi">--</p>
+    </div>
+
+    <div class="card">
+      <h3>Calories</h3>
+      <p id="calories">--</p>
+    </div>
+
+    <div class="card">
+      <h3>Status</h3>
+      <p id="status">--</p>
+    </div>
+
+  </div>
+
+  <div class="progress-section">
+
+    <h3>Fitness Progress</h3>
+
+    <div class="progress-bar">
+
+      <div id="progress"></div>
+
+    </div>
+
+  </div>
+
+  <div class="plan-card">
+
+    <h2>Your AI Fitness Plan</h2>
+
+    <div id="plan"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
