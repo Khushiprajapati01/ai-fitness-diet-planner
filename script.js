@@ -9,7 +9,6 @@ function generatePlan() {
 
   if (age === "" || weight === "" || height === "") {
     alert("Please fill all fields");
-
     return;
   }
 
@@ -105,5 +104,9 @@ function generatePlan() {
 
   document.getElementById("plan").innerHTML = plan;
 
-  document.getElementById("progress").style.width = progress + "%";
+  document.getElementById("progress").style.width =
+    progress + "%";
 }
+
+/* FUNCTION CALL */
+generatePlan();
