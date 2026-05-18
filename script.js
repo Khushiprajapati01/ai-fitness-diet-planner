@@ -1,35 +1,23 @@
-function generatePlan(){
+function generatePlan() {
+  const age = document.getElementById("age").value;
 
-  let age =
-    document.getElementById("age").value;
+  const weight = document.getElementById("weight").value;
 
-  let weight =
-    document.getElementById("weight").value;
+  const height = document.getElementById("height").value;
 
-  let height =
-    document.getElementById("height").value;
+  const goal = document.getElementById("goal").value;
 
-  let goal =
-    document.getElementById("goal").value;
-
-  if(
-    age === "" ||
-    weight === "" ||
-    height === ""
-  ){
-
+  if (age === "" || weight === "" || height === "") {
     alert("Please fill all fields");
 
     return;
   }
 
-  height = height / 100;
+  const heightInMeters = height / 100;
 
-  let bmi =
-    (weight / (height * height)).toFixed(1);
+  const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
 
-  let calories =
-    Math.floor(weight * 24);
+  let calories = Math.floor(weight * 24);
 
   let status = "";
 
@@ -37,8 +25,7 @@ function generatePlan(){
 
   let progress = 0;
 
-  if(bmi < 18.5){
-
+  if (bmi < 18.5) {
     status = "Underweight";
 
     progress = 35;
@@ -59,10 +46,7 @@ function generatePlan(){
       <h3>💧 Water Intake</h3>
       <p>3 Liters Daily</p>
     `;
-  }
-
-  else if(bmi < 25){
-
+  } else if (bmi < 25) {
     status = "Healthy";
 
     progress = 70;
@@ -83,10 +67,7 @@ function generatePlan(){
       <h3>💧 Water Intake</h3>
       <p>3-4 Liters Daily</p>
     `;
-  }
-
-  else{
-
+  } else {
     status = "Overweight";
 
     progress = 90;
@@ -109,29 +90,20 @@ function generatePlan(){
     `;
   }
 
-  if(goal === "loss"){
-
+  if (goal === "loss") {
     calories -= 300;
-  }
-
-  else if(goal === "gain"){
-
+  } else if (goal === "gain") {
     calories += 300;
   }
 
-  document.getElementById("bmi").innerHTML =
-    bmi;
+  document.getElementById("bmi").innerHTML = bmi;
 
   document.getElementById("calories").innerHTML =
     calories + " kcal";
 
-  document.getElementById("status").innerHTML =
-    status;
+  document.getElementById("status").innerHTML = status;
 
-  document.getElementById("plan").innerHTML =
-    plan;
+  document.getElementById("plan").innerHTML = plan;
 
-  document.getElementById("progress").style.width =
-    progress + "%";
-
+  document.getElementById("progress").style.width = progress + "%";
 }
